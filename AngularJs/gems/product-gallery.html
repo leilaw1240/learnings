@@ -1,0 +1,10 @@
+<div class='gallery' ng-show="product.images.length">
+    <img ng-src="{{product.images[gallery.current]}}" width="200" height="200" />
+    <ul class="list-inline thumbs">
+        <li class="thumbnail" ng-class="{thumb_product_active: gallery.current == $index }" ng-repeat="image in product.images track by $index" ng-click="gallery.setCurrent($index)">
+            <img ng-src="{{image}}" width="75" height="75" />
+        </li>
+    </ul>
+
+
+</div>
