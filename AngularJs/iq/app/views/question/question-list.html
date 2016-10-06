@@ -1,0 +1,34 @@
+<div class="tabs-warp question-tab">
+    <ul class="tabs">
+        <li class="tab" ng-click="questionlist.setCurrentTab($index)" ng-repeat="tabValue in questionlist.tabs track by $index"><a href="javascript:void(0)" ng-class="{ current: questionlist.getCurrentTab($index) }">{{tabValue}}</a></li>
+    </ul>
+    <div class="tab-inner-warp">
+        <div class="tab-inner">
+            <article class="question question-type-normal" ng-repeat="question in questionlist.questions">
+                <h2>
+                    <a href="">{{question.question}}</a>
+                </h2>
+                <a class="question-report" href="#">Report</a>
+                <div class="question-type-main"><i class="icon-question-sign"></i>Question</div>
+                <div class="question-author">
+                    <a href="#" original-title="ahmed" class="question-author-img tooltip-n"><span></span>
+                        <img alt="" ng-src="{{question.course_image}}"></a>
+                </div>
+                <div class="question-inner">
+                    <div class="clearfix"></div>
+                    {{question.question_desc}}
+                    <div class="question-details">
+                        <span class="question-answered question-answered-done"><i class="icon-ok"></i>solved</span>
+                        <span class="question-favorite"><i class="icon-star"></i>5</span>
+                    </div>
+                    <span class="question-category"><a href="#"><i class="icon-folder-close"></i>{{question.course_name}}</a></span>
+                    <span class="question-date"><i class="icon-time"></i>{{ question.created_date }}</span>
+                    <span class="question-comment"><a href="#"><i class="icon-comment"></i>{{question.ans_count}} Answer</a></span>
+                    <span class="question-view"><i class="icon-user"></i>{{question.view_count}} views</span>
+                    <div class="clearfix"></div>
+                </div>
+            </article>
+            <a href="#" class="load-questions"><i class="icon-refresh"></i>Load More Questions</a>
+        </div>
+    </div>
+</div>
