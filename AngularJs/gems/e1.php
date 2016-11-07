@@ -39,7 +39,7 @@
                         <section class="tab" ng-controller="TabController as tab">
                             <ul class="nav nav-pills">
                                 <li ng-class="{ active: tab.isSet(1) }">
-                                    <a href ng-click="tab.setTab(1)">Description</a></li>
+                                    <a href ng-class="{ active: tab.isSet(1) }">Description</a></li>
                                 <li ng-class="{ active: tab.isSet(2) }">
                                     <a href ng-click="tab.setTab(2)">Specs</a></li>
                                 <li ng-class="{ active: tab.isSet(3) }">
